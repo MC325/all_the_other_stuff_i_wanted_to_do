@@ -10,6 +10,7 @@ public class GUITest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		boolean appear = false;
 		JFrame theGUI = new JFrame();
 		theGUI.setTitle("GUI Program");
 		theGUI.setSize(300, 200);
@@ -24,7 +25,11 @@ public class GUITest {
 
 		button.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				System.out.println("yes");
+				if (!appear) {
+					panel.setVisible(true);
+				} else {
+					panel.setVisible(false);
+				}
 			}
 		});
 	}
